@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+exit 0
+
 set -e -x
 source setEnv.sh
 
