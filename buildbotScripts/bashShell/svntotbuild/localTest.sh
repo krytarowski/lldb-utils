@@ -9,6 +9,8 @@ function clean {
   svn status $lldbDir/test --no-ignore | grep '^[I?]' | cut -c 9- | while IFS= read -r f; do echo "$f"; rm -rf "$f"; done || true
   killall -9 lldb || true
   killall -9 a.out || true
+  killall -9 python2.7 || true
+  killall -9 multi-process-dr || true
 }
 trap clean EXIT
 
